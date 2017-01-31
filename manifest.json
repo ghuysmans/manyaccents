@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "manyaccents",
+	"description": "Add accents to Wordreference!",
+	"version": "1.0",
+	"author": "Guillaume Huysmans",
+	"applications": {
+		"gecko": {"id": "manyaccents@ghuysmans.github.io"}
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://www.wordreference.com/enfr/*"],
+			"js": ["manyaccents.js"]
+		}
+	],
+	"options_ui": {
+		"page": "options.html"
+	},
+	"permissions": [
+		"<all_urls>",
+		"storage"
+	]
+}
